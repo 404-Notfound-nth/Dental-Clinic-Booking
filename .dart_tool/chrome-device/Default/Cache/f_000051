@@ -1,0 +1,813 @@
+define(['dart_sdk', 'packages/flutter/src/painting/strut_style.dart', 'packages/flutter/src/widgets/widget_span.dart', 'packages/intl/date_symbol_data_local.dart', 'packages/flutter/src/widgets/scroll_view.dart', 'packages/flutter/src/painting/basic_types.dart', 'packages/date_picker_timeline/date_widget.dart', 'packages/flutter/src/material/colors.dart', 'packages/flutter/src/animation/curves.dart'], (function load__packages__date_picker_timeline__date_picker_widget_dart(dart_sdk, packages__flutter__src__painting__strut_style$46dart, packages__flutter__src__widgets__widget_span$46dart, packages__intl__date_symbol_data_local$46dart, packages__flutter__src__widgets__scroll_view$46dart, packages__flutter__src__painting__basic_types$46dart, packages__date_picker_timeline__date_widget$46dart, packages__flutter__src__material__colors$46dart, packages__flutter__src__animation__curves$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const ui = dart_sdk.ui;
+  const _internal = dart_sdk._internal;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const text_style = packages__flutter__src__painting__strut_style$46dart.src__painting__text_style;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const scroll_controller = packages__flutter__src__widgets__widget_span$46dart.src__widgets__scroll_controller;
+  const container = packages__flutter__src__widgets__widget_span$46dart.src__widgets__container;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const date_symbol_data_local = packages__intl__date_symbol_data_local$46dart.date_symbol_data_local;
+  const scroll_view = packages__flutter__src__widgets__scroll_view$46dart.src__widgets__scroll_view;
+  const basic_types = packages__flutter__src__painting__basic_types$46dart.src__painting__basic_types;
+  const date_widget = packages__date_picker_timeline__date_widget$46dart.date_widget;
+  const colors = packages__flutter__src__material__colors$46dart.src__material__colors;
+  const curves = packages__flutter__src__animation__curves$46dart.src__animation__curves;
+  var date_picker_widget = Object.create(dart.library);
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    VoidTovoid: () => (T.VoidTovoid = dart.constFn(dart.fnType(dart.void, [])))(),
+    DateTimeTovoid: () => (T.DateTimeTovoid = dart.constFn(dart.fnType(dart.void, [core.DateTime])))(),
+    _LocationL: () => (T._LocationL = dart.constFn(dart.legacy(widget_inspector._Location)))(),
+    BuildContextAndintToDateWidget: () => (T.BuildContextAndintToDateWidget = dart.constFn(dart.fnType(date_widget.DateWidget, [framework.BuildContext, core.int])))()
+  };
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C1() {
+      return C[1] = dart.const({
+        __proto__: ui.FontWeight.prototype,
+        [FontWeight_index]: 4
+      });
+    },
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4278190080.0
+      });
+    },
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: text_style.TextStyle.prototype,
+        [TextStyle_fontFeatures]: null,
+        [TextStyle_shadows]: null,
+        [TextStyle_debugLabel]: null,
+        [TextStyle_decorationThickness]: null,
+        [TextStyle_decorationStyle]: null,
+        [TextStyle_decorationColor]: null,
+        [TextStyle_decoration]: null,
+        [TextStyle_background]: null,
+        [TextStyle_foreground]: null,
+        [TextStyle_locale]: null,
+        [TextStyle_leadingDistribution]: null,
+        [TextStyle_height]: null,
+        [TextStyle_textBaseline]: null,
+        [TextStyle_wordSpacing]: null,
+        [TextStyle_letterSpacing]: null,
+        [TextStyle_fontStyle]: null,
+        [TextStyle_fontWeight]: C[1] || CT.C1,
+        [TextStyle_fontSize]: 11,
+        [TextStyle__package]: null,
+        [TextStyle__fontFamilyFallback]: null,
+        [TextStyle_fontFamily]: null,
+        [TextStyle_backgroundColor]: null,
+        [TextStyle_color]: C[2] || CT.C2,
+        [TextStyle_inherit]: true
+      });
+    },
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: text_style.TextStyle.prototype,
+        [TextStyle_fontFeatures]: null,
+        [TextStyle_shadows]: null,
+        [TextStyle_debugLabel]: null,
+        [TextStyle_decorationThickness]: null,
+        [TextStyle_decorationStyle]: null,
+        [TextStyle_decorationColor]: null,
+        [TextStyle_decoration]: null,
+        [TextStyle_background]: null,
+        [TextStyle_foreground]: null,
+        [TextStyle_locale]: null,
+        [TextStyle_leadingDistribution]: null,
+        [TextStyle_height]: null,
+        [TextStyle_textBaseline]: null,
+        [TextStyle_wordSpacing]: null,
+        [TextStyle_letterSpacing]: null,
+        [TextStyle_fontStyle]: null,
+        [TextStyle_fontWeight]: C[1] || CT.C1,
+        [TextStyle_fontSize]: 24,
+        [TextStyle__package]: null,
+        [TextStyle__fontFamilyFallback]: null,
+        [TextStyle_fontFamily]: null,
+        [TextStyle_backgroundColor]: null,
+        [TextStyle_color]: C[2] || CT.C2,
+        [TextStyle_inherit]: true
+      });
+    },
+    get C4() {
+      return C[4] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4294967295.0
+      });
+    },
+    get C5() {
+      return C[5] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 805306368
+      });
+    },
+    get C6() {
+      return C[6] = dart.const({
+        __proto__: ui.Color.prototype,
+        [Color_value]: 4284900966.0
+      });
+    },
+    get C9() {
+      return C[9] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "date",
+        [_Location_column]: 13,
+        [_Location_line]: 177,
+        [_Location_file]: null
+      });
+    },
+    get C10() {
+      return C[10] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "monthTextStyle",
+        [_Location_column]: 13,
+        [_Location_line]: 178,
+        [_Location_file]: null
+      });
+    },
+    get C11() {
+      return C[11] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "dateTextStyle",
+        [_Location_column]: 13,
+        [_Location_line]: 183,
+        [_Location_file]: null
+      });
+    },
+    get C12() {
+      return C[12] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "dayTextStyle",
+        [_Location_column]: 13,
+        [_Location_line]: 188,
+        [_Location_file]: null
+      });
+    },
+    get C13() {
+      return C[13] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "width",
+        [_Location_column]: 13,
+        [_Location_line]: 193,
+        [_Location_file]: null
+      });
+    },
+    get C14() {
+      return C[14] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "locale",
+        [_Location_column]: 13,
+        [_Location_line]: 194,
+        [_Location_file]: null
+      });
+    },
+    get C15() {
+      return C[15] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "selectionColor",
+        [_Location_column]: 13,
+        [_Location_line]: 195,
+        [_Location_file]: null
+      });
+    },
+    get C16() {
+      return C[16] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onDateSelected",
+        [_Location_column]: 13,
+        [_Location_line]: 197,
+        [_Location_file]: null
+      });
+    },
+    get C8() {
+      return C[8] = dart.constList([C[9] || CT.C9, C[10] || CT.C10, C[11] || CT.C11, C[12] || CT.C12, C[13] || CT.C13, C[14] || CT.C14, C[15] || CT.C15, C[16] || CT.C16], T._LocationL());
+    },
+    get C7() {
+      return C[7] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[8] || CT.C8,
+        [_Location_name]: null,
+        [_Location_column]: 18,
+        [_Location_line]: 176,
+        [_Location_file]: "file:///D:/Download/flutter/.pub-cache/hosted/pub.dartlang.org/date_picker_timeline-1.2.3/lib/date_picker_widget.dart"
+      });
+    },
+    get C19() {
+      return C[19] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "itemCount",
+        [_Location_column]: 9,
+        [_Location_line]: 136,
+        [_Location_file]: null
+      });
+    },
+    get C20() {
+      return C[20] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "scrollDirection",
+        [_Location_column]: 9,
+        [_Location_line]: 137,
+        [_Location_file]: null
+      });
+    },
+    get C21() {
+      return C[21] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "controller",
+        [_Location_column]: 9,
+        [_Location_line]: 138,
+        [_Location_file]: null
+      });
+    },
+    get C22() {
+      return C[22] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "itemBuilder",
+        [_Location_column]: 9,
+        [_Location_line]: 139,
+        [_Location_file]: null
+      });
+    },
+    get C18() {
+      return C[18] = dart.constList([C[19] || CT.C19, C[20] || CT.C20, C[21] || CT.C21, C[22] || CT.C22], T._LocationL());
+    },
+    get C17() {
+      return C[17] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[18] || CT.C18,
+        [_Location_name]: null,
+        [_Location_column]: 23,
+        [_Location_line]: 135,
+        [_Location_file]: "file:///D:/Download/flutter/.pub-cache/hosted/pub.dartlang.org/date_picker_timeline-1.2.3/lib/date_picker_widget.dart"
+      });
+    },
+    get C25() {
+      return C[25] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 7,
+        [_Location_line]: 134,
+        [_Location_file]: null
+      });
+    },
+    get C26() {
+      return C[26] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 7,
+        [_Location_line]: 135,
+        [_Location_file]: null
+      });
+    },
+    get C24() {
+      return C[24] = dart.constList([C[25] || CT.C25, C[26] || CT.C26], T._LocationL());
+    },
+    get C23() {
+      return C[23] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[24] || CT.C24,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 133,
+        [_Location_file]: "file:///D:/Download/flutter/.pub-cache/hosted/pub.dartlang.org/date_picker_timeline-1.2.3/lib/date_picker_widget.dart"
+      });
+    },
+    get C27() {
+      return C[27] = dart.const({
+        __proto__: core.Duration.prototype,
+        [Duration__duration]: 500000
+      });
+    },
+    get C28() {
+      return C[28] = dart.const({
+        __proto__: curves._Linear.prototype
+      });
+    }
+  }, false);
+  var C = Array(29).fill(void 0);
+  var I = [
+    "file:///D:/Download/flutter/.pub-cache/hosted/pub.dartlang.org/date_picker_timeline-1.2.3/lib/date_picker_widget.dart",
+    "package:date_picker_timeline/date_picker_widget.dart"
+  ];
+  var startDate$ = dart.privateName(date_picker_widget, "DatePicker.startDate");
+  var width$ = dart.privateName(date_picker_widget, "DatePicker.width");
+  var height$ = dart.privateName(date_picker_widget, "DatePicker.height");
+  var controller$ = dart.privateName(date_picker_widget, "DatePicker.controller");
+  var selectedTextColor$ = dart.privateName(date_picker_widget, "DatePicker.selectedTextColor");
+  var selectionColor$ = dart.privateName(date_picker_widget, "DatePicker.selectionColor");
+  var deactivatedColor$ = dart.privateName(date_picker_widget, "DatePicker.deactivatedColor");
+  var monthTextStyle$ = dart.privateName(date_picker_widget, "DatePicker.monthTextStyle");
+  var dayTextStyle$ = dart.privateName(date_picker_widget, "DatePicker.dayTextStyle");
+  var dateTextStyle$ = dart.privateName(date_picker_widget, "DatePicker.dateTextStyle");
+  var initialSelectedDate$ = dart.privateName(date_picker_widget, "DatePicker.initialSelectedDate");
+  var inactiveDates$ = dart.privateName(date_picker_widget, "DatePicker.inactiveDates");
+  var activeDates$ = dart.privateName(date_picker_widget, "DatePicker.activeDates");
+  var onDateChange$ = dart.privateName(date_picker_widget, "DatePicker.onDateChange");
+  var daysCount$ = dart.privateName(date_picker_widget, "DatePicker.daysCount");
+  var locale$ = dart.privateName(date_picker_widget, "DatePicker.locale");
+  var TextStyle_fontFeatures = dart.privateName(text_style, "TextStyle.fontFeatures");
+  var TextStyle_shadows = dart.privateName(text_style, "TextStyle.shadows");
+  var TextStyle_debugLabel = dart.privateName(text_style, "TextStyle.debugLabel");
+  var TextStyle_decorationThickness = dart.privateName(text_style, "TextStyle.decorationThickness");
+  var TextStyle_decorationStyle = dart.privateName(text_style, "TextStyle.decorationStyle");
+  var TextStyle_decorationColor = dart.privateName(text_style, "TextStyle.decorationColor");
+  var TextStyle_decoration = dart.privateName(text_style, "TextStyle.decoration");
+  var TextStyle_background = dart.privateName(text_style, "TextStyle.background");
+  var TextStyle_foreground = dart.privateName(text_style, "TextStyle.foreground");
+  var TextStyle_locale = dart.privateName(text_style, "TextStyle.locale");
+  var TextStyle_leadingDistribution = dart.privateName(text_style, "TextStyle.leadingDistribution");
+  var TextStyle_height = dart.privateName(text_style, "TextStyle.height");
+  var TextStyle_textBaseline = dart.privateName(text_style, "TextStyle.textBaseline");
+  var TextStyle_wordSpacing = dart.privateName(text_style, "TextStyle.wordSpacing");
+  var TextStyle_letterSpacing = dart.privateName(text_style, "TextStyle.letterSpacing");
+  var TextStyle_fontStyle = dart.privateName(text_style, "TextStyle.fontStyle");
+  var FontWeight_index = dart.privateName(ui, "FontWeight.index");
+  var TextStyle_fontWeight = dart.privateName(text_style, "TextStyle.fontWeight");
+  var TextStyle_fontSize = dart.privateName(text_style, "TextStyle.fontSize");
+  var TextStyle__package = dart.privateName(text_style, "TextStyle._package");
+  var TextStyle__fontFamilyFallback = dart.privateName(text_style, "TextStyle._fontFamilyFallback");
+  var TextStyle_fontFamily = dart.privateName(text_style, "TextStyle.fontFamily");
+  var TextStyle_backgroundColor = dart.privateName(text_style, "TextStyle.backgroundColor");
+  var Color_value = dart.privateName(ui, "Color.value");
+  var TextStyle_color = dart.privateName(text_style, "TextStyle.color");
+  var TextStyle_inherit = dart.privateName(text_style, "TextStyle.inherit");
+  date_picker_widget.DatePicker = class DatePicker extends framework.StatefulWidget {
+    get startDate() {
+      return this[startDate$];
+    }
+    set startDate(value) {
+      super.startDate = value;
+    }
+    get width() {
+      return this[width$];
+    }
+    set width(value) {
+      super.width = value;
+    }
+    get height() {
+      return this[height$];
+    }
+    set height(value) {
+      super.height = value;
+    }
+    get controller() {
+      return this[controller$];
+    }
+    set controller(value) {
+      super.controller = value;
+    }
+    get selectedTextColor() {
+      return this[selectedTextColor$];
+    }
+    set selectedTextColor(value) {
+      super.selectedTextColor = value;
+    }
+    get selectionColor() {
+      return this[selectionColor$];
+    }
+    set selectionColor(value) {
+      super.selectionColor = value;
+    }
+    get deactivatedColor() {
+      return this[deactivatedColor$];
+    }
+    set deactivatedColor(value) {
+      super.deactivatedColor = value;
+    }
+    get monthTextStyle() {
+      return this[monthTextStyle$];
+    }
+    set monthTextStyle(value) {
+      super.monthTextStyle = value;
+    }
+    get dayTextStyle() {
+      return this[dayTextStyle$];
+    }
+    set dayTextStyle(value) {
+      super.dayTextStyle = value;
+    }
+    get dateTextStyle() {
+      return this[dateTextStyle$];
+    }
+    set dateTextStyle(value) {
+      super.dateTextStyle = value;
+    }
+    get initialSelectedDate() {
+      return this[initialSelectedDate$];
+    }
+    set initialSelectedDate(value) {
+      super.initialSelectedDate = value;
+    }
+    get inactiveDates() {
+      return this[inactiveDates$];
+    }
+    set inactiveDates(value) {
+      super.inactiveDates = value;
+    }
+    get activeDates() {
+      return this[activeDates$];
+    }
+    set activeDates(value) {
+      super.activeDates = value;
+    }
+    get onDateChange() {
+      return this[onDateChange$];
+    }
+    set onDateChange(value) {
+      super.onDateChange = value;
+    }
+    get daysCount() {
+      return this[daysCount$];
+    }
+    set daysCount(value) {
+      super.daysCount = value;
+    }
+    get locale() {
+      return this[locale$];
+    }
+    set locale(value) {
+      super.locale = value;
+    }
+    createState() {
+      return new date_picker_widget._DatePickerState.new();
+    }
+  };
+  (date_picker_widget.DatePicker.new = function(startDate, opts) {
+    if (startDate == null) dart.nullFailed(I[0], 64, 10, "startDate");
+    let key = opts && 'key' in opts ? opts.key : null;
+    let width = opts && 'width' in opts ? opts.width : 60;
+    if (width == null) dart.nullFailed(I[0], 66, 10, "width");
+    let height = opts && 'height' in opts ? opts.height : 80;
+    if (height == null) dart.nullFailed(I[0], 67, 10, "height");
+    let controller = opts && 'controller' in opts ? opts.controller : null;
+    let monthTextStyle = opts && 'monthTextStyle' in opts ? opts.monthTextStyle : C[0] || CT.C0;
+    if (monthTextStyle == null) dart.nullFailed(I[0], 69, 10, "monthTextStyle");
+    let dayTextStyle = opts && 'dayTextStyle' in opts ? opts.dayTextStyle : C[0] || CT.C0;
+    if (dayTextStyle == null) dart.nullFailed(I[0], 70, 10, "dayTextStyle");
+    let dateTextStyle = opts && 'dateTextStyle' in opts ? opts.dateTextStyle : C[3] || CT.C3;
+    if (dateTextStyle == null) dart.nullFailed(I[0], 71, 10, "dateTextStyle");
+    let selectedTextColor = opts && 'selectedTextColor' in opts ? opts.selectedTextColor : C[4] || CT.C4;
+    if (selectedTextColor == null) dart.nullFailed(I[0], 72, 10, "selectedTextColor");
+    let selectionColor = opts && 'selectionColor' in opts ? opts.selectionColor : C[5] || CT.C5;
+    if (selectionColor == null) dart.nullFailed(I[0], 73, 10, "selectionColor");
+    let deactivatedColor = opts && 'deactivatedColor' in opts ? opts.deactivatedColor : C[6] || CT.C6;
+    if (deactivatedColor == null) dart.nullFailed(I[0], 74, 10, "deactivatedColor");
+    let initialSelectedDate = opts && 'initialSelectedDate' in opts ? opts.initialSelectedDate : null;
+    let activeDates = opts && 'activeDates' in opts ? opts.activeDates : null;
+    let inactiveDates = opts && 'inactiveDates' in opts ? opts.inactiveDates : null;
+    let daysCount = opts && 'daysCount' in opts ? opts.daysCount : 500;
+    if (daysCount == null) dart.nullFailed(I[0], 78, 10, "daysCount");
+    let onDateChange = opts && 'onDateChange' in opts ? opts.onDateChange : null;
+    let locale = opts && 'locale' in opts ? opts.locale : "en_US";
+    if (locale == null) dart.nullFailed(I[0], 80, 10, "locale");
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    this[startDate$] = startDate;
+    this[width$] = width;
+    this[height$] = height;
+    this[controller$] = controller;
+    this[monthTextStyle$] = monthTextStyle;
+    this[dayTextStyle$] = dayTextStyle;
+    this[dateTextStyle$] = dateTextStyle;
+    this[selectedTextColor$] = selectedTextColor;
+    this[selectionColor$] = selectionColor;
+    this[deactivatedColor$] = deactivatedColor;
+    this[initialSelectedDate$] = initialSelectedDate;
+    this[activeDates$] = activeDates;
+    this[inactiveDates$] = inactiveDates;
+    this[daysCount$] = daysCount;
+    this[onDateChange$] = onDateChange;
+    this[locale$] = locale;
+    if (!(activeDates == null || inactiveDates == null)) dart.assertFailed("Can't " + "provide both activated and deactivated dates List at the same time.", I[0], 82, 13, "activeDates == null || inactiveDates == null");
+    date_picker_widget.DatePicker.__proto__.new.call(this, {$creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = date_picker_widget.DatePicker.prototype;
+  dart.addTypeTests(date_picker_widget.DatePicker);
+  dart.addTypeCaches(date_picker_widget.DatePicker);
+  dart.setMethodSignature(date_picker_widget.DatePicker, () => ({
+    __proto__: dart.getMethods(date_picker_widget.DatePicker.__proto__),
+    createState: dart.fnType(framework.State$(framework.StatefulWidget), [])
+  }));
+  dart.setLibraryUri(date_picker_widget.DatePicker, I[1]);
+  dart.setFieldSignature(date_picker_widget.DatePicker, () => ({
+    __proto__: dart.getFields(date_picker_widget.DatePicker.__proto__),
+    startDate: dart.finalFieldType(core.DateTime),
+    width: dart.finalFieldType(core.double),
+    height: dart.finalFieldType(core.double),
+    controller: dart.finalFieldType(dart.nullable(date_picker_widget.DatePickerController)),
+    selectedTextColor: dart.finalFieldType(ui.Color),
+    selectionColor: dart.finalFieldType(ui.Color),
+    deactivatedColor: dart.finalFieldType(ui.Color),
+    monthTextStyle: dart.finalFieldType(text_style.TextStyle),
+    dayTextStyle: dart.finalFieldType(text_style.TextStyle),
+    dateTextStyle: dart.finalFieldType(text_style.TextStyle),
+    initialSelectedDate: dart.finalFieldType(dart.nullable(core.DateTime)),
+    inactiveDates: dart.finalFieldType(dart.nullable(core.List$(core.DateTime))),
+    activeDates: dart.finalFieldType(dart.nullable(core.List$(core.DateTime))),
+    onDateChange: dart.finalFieldType(dart.nullable(dart.fnType(dart.void, [core.DateTime]))),
+    daysCount: dart.finalFieldType(core.int),
+    locale: dart.finalFieldType(core.String)
+  }));
+  var _currentDate = dart.privateName(date_picker_widget, "_currentDate");
+  var _controller = dart.privateName(date_picker_widget, "_controller");
+  var ___DatePickerState_selectedDateStyle = dart.privateName(date_picker_widget, "_#_DatePickerState#selectedDateStyle");
+  var ___DatePickerState_selectedDateStyle_isSet = dart.privateName(date_picker_widget, "_#_DatePickerState#selectedDateStyle#isSet");
+  var ___DatePickerState_selectedMonthStyle = dart.privateName(date_picker_widget, "_#_DatePickerState#selectedMonthStyle");
+  var ___DatePickerState_selectedMonthStyle_isSet = dart.privateName(date_picker_widget, "_#_DatePickerState#selectedMonthStyle#isSet");
+  var ___DatePickerState_selectedDayStyle = dart.privateName(date_picker_widget, "_#_DatePickerState#selectedDayStyle");
+  var ___DatePickerState_selectedDayStyle_isSet = dart.privateName(date_picker_widget, "_#_DatePickerState#selectedDayStyle#isSet");
+  var ___DatePickerState_deactivatedDateStyle = dart.privateName(date_picker_widget, "_#_DatePickerState#deactivatedDateStyle");
+  var ___DatePickerState_deactivatedDateStyle_isSet = dart.privateName(date_picker_widget, "_#_DatePickerState#deactivatedDateStyle#isSet");
+  var ___DatePickerState_deactivatedMonthStyle = dart.privateName(date_picker_widget, "_#_DatePickerState#deactivatedMonthStyle");
+  var ___DatePickerState_deactivatedMonthStyle_isSet = dart.privateName(date_picker_widget, "_#_DatePickerState#deactivatedMonthStyle#isSet");
+  var ___DatePickerState_deactivatedDayStyle = dart.privateName(date_picker_widget, "_#_DatePickerState#deactivatedDayStyle");
+  var ___DatePickerState_deactivatedDayStyle_isSet = dart.privateName(date_picker_widget, "_#_DatePickerState#deactivatedDayStyle#isSet");
+  var _compareDate = dart.privateName(date_picker_widget, "_compareDate");
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  date_picker_widget._DatePickerState = class _DatePickerState extends framework.State$(date_picker_widget.DatePicker) {
+    get selectedDateStyle() {
+      let t0;
+      return dart.test(this[___DatePickerState_selectedDateStyle_isSet]) ? (t0 = this[___DatePickerState_selectedDateStyle], t0) : dart.throw(new _internal.LateError.fieldNI("selectedDateStyle"));
+    }
+    set selectedDateStyle(t0) {
+      if (t0 == null) dart.nullFailed(I[0], 95, 24, "null");
+      if (dart.test(this[___DatePickerState_selectedDateStyle_isSet]))
+        dart.throw(new _internal.LateError.fieldAI("selectedDateStyle"));
+      else {
+        this[___DatePickerState_selectedDateStyle_isSet] = true;
+        this[___DatePickerState_selectedDateStyle] = t0;
+      }
+    }
+    get selectedMonthStyle() {
+      let t1;
+      return dart.test(this[___DatePickerState_selectedMonthStyle_isSet]) ? (t1 = this[___DatePickerState_selectedMonthStyle], t1) : dart.throw(new _internal.LateError.fieldNI("selectedMonthStyle"));
+    }
+    set selectedMonthStyle(t1) {
+      if (t1 == null) dart.nullFailed(I[0], 96, 24, "null");
+      if (dart.test(this[___DatePickerState_selectedMonthStyle_isSet]))
+        dart.throw(new _internal.LateError.fieldAI("selectedMonthStyle"));
+      else {
+        this[___DatePickerState_selectedMonthStyle_isSet] = true;
+        this[___DatePickerState_selectedMonthStyle] = t1;
+      }
+    }
+    get selectedDayStyle() {
+      let t2;
+      return dart.test(this[___DatePickerState_selectedDayStyle_isSet]) ? (t2 = this[___DatePickerState_selectedDayStyle], t2) : dart.throw(new _internal.LateError.fieldNI("selectedDayStyle"));
+    }
+    set selectedDayStyle(t2) {
+      if (t2 == null) dart.nullFailed(I[0], 97, 24, "null");
+      if (dart.test(this[___DatePickerState_selectedDayStyle_isSet]))
+        dart.throw(new _internal.LateError.fieldAI("selectedDayStyle"));
+      else {
+        this[___DatePickerState_selectedDayStyle_isSet] = true;
+        this[___DatePickerState_selectedDayStyle] = t2;
+      }
+    }
+    get deactivatedDateStyle() {
+      let t3;
+      return dart.test(this[___DatePickerState_deactivatedDateStyle_isSet]) ? (t3 = this[___DatePickerState_deactivatedDateStyle], t3) : dart.throw(new _internal.LateError.fieldNI("deactivatedDateStyle"));
+    }
+    set deactivatedDateStyle(t3) {
+      if (t3 == null) dart.nullFailed(I[0], 99, 24, "null");
+      if (dart.test(this[___DatePickerState_deactivatedDateStyle_isSet]))
+        dart.throw(new _internal.LateError.fieldAI("deactivatedDateStyle"));
+      else {
+        this[___DatePickerState_deactivatedDateStyle_isSet] = true;
+        this[___DatePickerState_deactivatedDateStyle] = t3;
+      }
+    }
+    get deactivatedMonthStyle() {
+      let t4;
+      return dart.test(this[___DatePickerState_deactivatedMonthStyle_isSet]) ? (t4 = this[___DatePickerState_deactivatedMonthStyle], t4) : dart.throw(new _internal.LateError.fieldNI("deactivatedMonthStyle"));
+    }
+    set deactivatedMonthStyle(t4) {
+      if (t4 == null) dart.nullFailed(I[0], 100, 24, "null");
+      if (dart.test(this[___DatePickerState_deactivatedMonthStyle_isSet]))
+        dart.throw(new _internal.LateError.fieldAI("deactivatedMonthStyle"));
+      else {
+        this[___DatePickerState_deactivatedMonthStyle_isSet] = true;
+        this[___DatePickerState_deactivatedMonthStyle] = t4;
+      }
+    }
+    get deactivatedDayStyle() {
+      let t5;
+      return dart.test(this[___DatePickerState_deactivatedDayStyle_isSet]) ? (t5 = this[___DatePickerState_deactivatedDayStyle], t5) : dart.throw(new _internal.LateError.fieldNI("deactivatedDayStyle"));
+    }
+    set deactivatedDayStyle(t5) {
+      if (t5 == null) dart.nullFailed(I[0], 101, 24, "null");
+      if (dart.test(this[___DatePickerState_deactivatedDayStyle_isSet]))
+        dart.throw(new _internal.LateError.fieldAI("deactivatedDayStyle"));
+      else {
+        this[___DatePickerState_deactivatedDayStyle_isSet] = true;
+        this[___DatePickerState_deactivatedDayStyle] = t5;
+      }
+    }
+    initState() {
+      date_symbol_data_local.initializeDateFormatting(this.widget.locale, null);
+      this[_currentDate] = this.widget.initialSelectedDate;
+      if (this.widget.controller != null) {
+        dart.nullCheck(this.widget.controller).setDatePickerState(this);
+      }
+      this.selectedDateStyle = this.widget.dateTextStyle.copyWith({color: this.widget.selectedTextColor});
+      this.selectedMonthStyle = this.widget.monthTextStyle.copyWith({color: this.widget.selectedTextColor});
+      this.selectedDayStyle = this.widget.dayTextStyle.copyWith({color: this.widget.selectedTextColor});
+      this.deactivatedDateStyle = this.widget.dateTextStyle.copyWith({color: this.widget.deactivatedColor});
+      this.deactivatedMonthStyle = this.widget.monthTextStyle.copyWith({color: this.widget.deactivatedColor});
+      this.deactivatedDayStyle = this.widget.dayTextStyle.copyWith({color: this.widget.deactivatedColor});
+      super.initState();
+    }
+    build(context) {
+      if (context == null) dart.nullFailed(I[0], 132, 29, "context");
+      return new container.Container.new({height: this.widget.height, child: new scroll_view.ListView.builder({itemCount: this.widget.daysCount, scrollDirection: basic_types.Axis.horizontal, controller: this[_controller], itemBuilder: dart.fn((context, index) => {
+            if (context == null) dart.nullFailed(I[0], 139, 23, "context");
+            if (index == null) dart.nullFailed(I[0], 139, 32, "index");
+            let date = null;
+            let _date = this.widget.startDate.add(new core.Duration.new({days: index}));
+            date = new core.DateTime.new(_date.year, _date.month, _date.day);
+            let isDeactivated = false;
+            if (this.widget.inactiveDates != null) {
+              for (let inactiveDate of dart.nullCheck(this.widget.inactiveDates)) {
+                if (dart.test(this[_compareDate](date, inactiveDate))) {
+                  isDeactivated = true;
+                  break;
+                }
+              }
+            }
+            if (this.widget.activeDates != null) {
+              isDeactivated = true;
+              for (let activateDate of dart.nullCheck(this.widget.activeDates)) {
+                if (dart.test(this[_compareDate](date, activateDate))) {
+                  isDeactivated = false;
+                  break;
+                }
+              }
+            }
+            let isSelected = this[_currentDate] != null ? this[_compareDate](date, dart.nullCheck(this[_currentDate])) : false;
+            return new date_widget.DateWidget.new({date: date, monthTextStyle: isDeactivated ? this.deactivatedMonthStyle : dart.test(isSelected) ? this.selectedMonthStyle : this.widget.monthTextStyle, dateTextStyle: isDeactivated ? this.deactivatedDateStyle : dart.test(isSelected) ? this.selectedDateStyle : this.widget.dateTextStyle, dayTextStyle: isDeactivated ? this.deactivatedDayStyle : dart.test(isSelected) ? this.selectedDayStyle : this.widget.dayTextStyle, width: this.widget.width, locale: this.widget.locale, selectionColor: dart.test(isSelected) ? this.widget.selectionColor : colors.Colors.transparent, onDateSelected: dart.fn(selectedDate => {
+                if (selectedDate == null) dart.nullFailed(I[0], 197, 30, "selectedDate");
+                if (isDeactivated) return;
+                if (this.widget.onDateChange != null) {
+                  dart.nullCheck(this.widget.onDateChange)(selectedDate);
+                }
+                this.setState(dart.fn(() => {
+                  this[_currentDate] = selectedDate;
+                }, T.VoidTovoid()));
+              }, T.DateTimeTovoid()), $creationLocationd_0dea112b090073317d4: C[7] || CT.C7});
+          }, T.BuildContextAndintToDateWidget()), $creationLocationd_0dea112b090073317d4: C[17] || CT.C17}), $creationLocationd_0dea112b090073317d4: C[23] || CT.C23});
+    }
+    [_compareDate](date1, date2) {
+      if (date1 == null) dart.nullFailed(I[0], 217, 30, "date1");
+      if (date2 == null) dart.nullFailed(I[0], 217, 46, "date2");
+      return date1.day == date2.day && date1.month == date2.month && date1.year == date2.year;
+    }
+  };
+  (date_picker_widget._DatePickerState.new = function() {
+    this[_currentDate] = null;
+    this[_controller] = new scroll_controller.ScrollController.new();
+    this[___DatePickerState_selectedDateStyle] = null;
+    this[___DatePickerState_selectedDateStyle_isSet] = false;
+    this[___DatePickerState_selectedMonthStyle] = null;
+    this[___DatePickerState_selectedMonthStyle_isSet] = false;
+    this[___DatePickerState_selectedDayStyle] = null;
+    this[___DatePickerState_selectedDayStyle_isSet] = false;
+    this[___DatePickerState_deactivatedDateStyle] = null;
+    this[___DatePickerState_deactivatedDateStyle_isSet] = false;
+    this[___DatePickerState_deactivatedMonthStyle] = null;
+    this[___DatePickerState_deactivatedMonthStyle_isSet] = false;
+    this[___DatePickerState_deactivatedDayStyle] = null;
+    this[___DatePickerState_deactivatedDayStyle_isSet] = false;
+    date_picker_widget._DatePickerState.__proto__.new.call(this);
+    ;
+  }).prototype = date_picker_widget._DatePickerState.prototype;
+  dart.addTypeTests(date_picker_widget._DatePickerState);
+  dart.addTypeCaches(date_picker_widget._DatePickerState);
+  dart.setMethodSignature(date_picker_widget._DatePickerState, () => ({
+    __proto__: dart.getMethods(date_picker_widget._DatePickerState.__proto__),
+    build: dart.fnType(framework.Widget, [framework.BuildContext]),
+    [_compareDate]: dart.fnType(core.bool, [core.DateTime, core.DateTime])
+  }));
+  dart.setGetterSignature(date_picker_widget._DatePickerState, () => ({
+    __proto__: dart.getGetters(date_picker_widget._DatePickerState.__proto__),
+    selectedDateStyle: text_style.TextStyle,
+    selectedMonthStyle: text_style.TextStyle,
+    selectedDayStyle: text_style.TextStyle,
+    deactivatedDateStyle: text_style.TextStyle,
+    deactivatedMonthStyle: text_style.TextStyle,
+    deactivatedDayStyle: text_style.TextStyle
+  }));
+  dart.setSetterSignature(date_picker_widget._DatePickerState, () => ({
+    __proto__: dart.getSetters(date_picker_widget._DatePickerState.__proto__),
+    selectedDateStyle: text_style.TextStyle,
+    selectedMonthStyle: text_style.TextStyle,
+    selectedDayStyle: text_style.TextStyle,
+    deactivatedDateStyle: text_style.TextStyle,
+    deactivatedMonthStyle: text_style.TextStyle,
+    deactivatedDayStyle: text_style.TextStyle
+  }));
+  dart.setLibraryUri(date_picker_widget._DatePickerState, I[1]);
+  dart.setFieldSignature(date_picker_widget._DatePickerState, () => ({
+    __proto__: dart.getFields(date_picker_widget._DatePickerState.__proto__),
+    [_currentDate]: dart.fieldType(dart.nullable(core.DateTime)),
+    [_controller]: dart.fieldType(scroll_controller.ScrollController),
+    [___DatePickerState_selectedDateStyle]: dart.fieldType(dart.nullable(text_style.TextStyle)),
+    [___DatePickerState_selectedDateStyle_isSet]: dart.fieldType(core.bool),
+    [___DatePickerState_selectedMonthStyle]: dart.fieldType(dart.nullable(text_style.TextStyle)),
+    [___DatePickerState_selectedMonthStyle_isSet]: dart.fieldType(core.bool),
+    [___DatePickerState_selectedDayStyle]: dart.fieldType(dart.nullable(text_style.TextStyle)),
+    [___DatePickerState_selectedDayStyle_isSet]: dart.fieldType(core.bool),
+    [___DatePickerState_deactivatedDateStyle]: dart.fieldType(dart.nullable(text_style.TextStyle)),
+    [___DatePickerState_deactivatedDateStyle_isSet]: dart.fieldType(core.bool),
+    [___DatePickerState_deactivatedMonthStyle]: dart.fieldType(dart.nullable(text_style.TextStyle)),
+    [___DatePickerState_deactivatedMonthStyle_isSet]: dart.fieldType(core.bool),
+    [___DatePickerState_deactivatedDayStyle]: dart.fieldType(dart.nullable(text_style.TextStyle)),
+    [___DatePickerState_deactivatedDayStyle_isSet]: dart.fieldType(core.bool)
+  }));
+  var _datePickerState = dart.privateName(date_picker_widget, "_datePickerState");
+  var _calculateDateOffset = dart.privateName(date_picker_widget, "_calculateDateOffset");
+  var Duration__duration = dart.privateName(core, "Duration._duration");
+  date_picker_widget.DatePickerController = class DatePickerController extends core.Object {
+    setDatePickerState(state) {
+      if (state == null) dart.nullFailed(I[0], 227, 44, "state");
+      this[_datePickerState] = state;
+    }
+    jumpToSelection() {
+      if (!(this[_datePickerState] != null)) dart.assertFailed("DatePickerController is not attached to any DatePicker View.", I[0], 232, 12, "_datePickerState != null");
+      dart.nullCheck(this[_datePickerState])[_controller].jumpTo(this[_calculateDateOffset](dart.nullCheck(dart.nullCheck(this[_datePickerState])[_currentDate])));
+    }
+    animateToSelection(opts) {
+      let duration = opts && 'duration' in opts ? opts.duration : C[27] || CT.C27;
+      let curve = opts && 'curve' in opts ? opts.curve : C[28] || CT.C28;
+      if (!(this[_datePickerState] != null)) dart.assertFailed("DatePickerController is not attached to any DatePicker View.", I[0], 243, 12, "_datePickerState != null");
+      dart.nullCheck(this[_datePickerState])[_controller].animateTo(this[_calculateDateOffset](dart.nullCheck(dart.nullCheck(this[_datePickerState])[_currentDate])), {duration: core.Duration.as(duration), curve: curves.Curve.as(curve)});
+    }
+    animateToDate(date, opts) {
+      if (date == null) dart.nullFailed(I[0], 255, 31, "date");
+      let duration = opts && 'duration' in opts ? opts.duration : C[27] || CT.C27;
+      let curve = opts && 'curve' in opts ? opts.curve : C[28] || CT.C28;
+      if (!(this[_datePickerState] != null)) dart.assertFailed("DatePickerController is not attached to any DatePicker View.", I[0], 257, 12, "_datePickerState != null");
+      dart.nullCheck(this[_datePickerState])[_controller].animateTo(this[_calculateDateOffset](date), {duration: core.Duration.as(duration), curve: curves.Curve.as(curve)});
+    }
+    [_calculateDateOffset](date) {
+      if (date == null) dart.nullFailed(I[0], 266, 40, "date");
+      let startDate = new core.DateTime.new(dart.nullCheck(this[_datePickerState]).widget.startDate.year, dart.nullCheck(this[_datePickerState]).widget.startDate.month, dart.nullCheck(this[_datePickerState]).widget.startDate.day);
+      let offset = date.difference(startDate).inDays;
+      return dart.notNull(offset) * dart.notNull(dart.nullCheck(this[_datePickerState]).widget.width) + dart.notNull(offset) * 6;
+    }
+  };
+  (date_picker_widget.DatePickerController.new = function() {
+    this[_datePickerState] = null;
+    ;
+  }).prototype = date_picker_widget.DatePickerController.prototype;
+  dart.addTypeTests(date_picker_widget.DatePickerController);
+  dart.addTypeCaches(date_picker_widget.DatePickerController);
+  dart.setMethodSignature(date_picker_widget.DatePickerController, () => ({
+    __proto__: dart.getMethods(date_picker_widget.DatePickerController.__proto__),
+    setDatePickerState: dart.fnType(dart.void, [date_picker_widget._DatePickerState]),
+    jumpToSelection: dart.fnType(dart.void, []),
+    animateToSelection: dart.fnType(dart.void, [], {curve: dart.dynamic, duration: dart.dynamic}, {}),
+    animateToDate: dart.fnType(dart.void, [core.DateTime], {curve: dart.dynamic, duration: dart.dynamic}, {}),
+    [_calculateDateOffset]: dart.fnType(core.double, [core.DateTime])
+  }));
+  dart.setLibraryUri(date_picker_widget.DatePickerController, I[1]);
+  dart.setFieldSignature(date_picker_widget.DatePickerController, () => ({
+    __proto__: dart.getFields(date_picker_widget.DatePickerController.__proto__),
+    [_datePickerState]: dart.fieldType(dart.nullable(date_picker_widget._DatePickerState))
+  }));
+  dart.trackLibraries("packages/date_picker_timeline/date_picker_widget.dart", {
+    "package:date_picker_timeline/date_picker_widget.dart": date_picker_widget
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["date_picker_widget.dart"],"names":[],"mappings":"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","file":"../../../../../../../packages/date_picker_timeline/date_picker_widget.dart.lib.js"}');
+  // Exports:
+  return {
+    date_picker_widget: date_picker_widget
+  };
+}));
+
+//# sourceMappingURL=date_picker_widget.dart.lib.js.map

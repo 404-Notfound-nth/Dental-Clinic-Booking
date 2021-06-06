@@ -1,0 +1,6 @@
+io/flutter/plugins/GeneratedPluginRegistrant.java
+ io.flutter.plugins.GeneratedPluginRegistrant
+com/example/clinicbookingapp/MainActivity.java
+ com.example.clinicbookingapp.MainActivity
+com/example/clinicbookingapp/BuildConfig.java
+ com.example.clinicbookingapp.BuildConfig

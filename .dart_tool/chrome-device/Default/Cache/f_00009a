@@ -1,0 +1,422 @@
+define(['dart_sdk', 'packages/flutter/src/material/icon_button.dart', 'packages/flutter/src/widgets/widget_span.dart', 'packages/flutter/src/painting/edge_insets.dart', 'packages/flutter/src/painting/box_decoration.dart', 'packages/flutter/src/painting/border_radius.dart', 'packages/flutter/src/rendering/flex.dart', 'packages/intl/src/intl/date_format.dart', 'packages/flutter/src/painting/strut_style.dart'], (function load__packages__date_picker_timeline__date_widget_dart(dart_sdk, packages__flutter__src__material__icon_button$46dart, packages__flutter__src__widgets__widget_span$46dart, packages__flutter__src__painting__edge_insets$46dart, packages__flutter__src__painting__box_decoration$46dart, packages__flutter__src__painting__border_radius$46dart, packages__flutter__src__rendering__flex$46dart, packages__intl__src__intl__date_format$46dart, packages__flutter__src__painting__strut_style$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const ui = dart_sdk.ui;
+  const _interceptors = dart_sdk._interceptors;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const ink_well = packages__flutter__src__material__icon_button$46dart.src__material__ink_well;
+  const container = packages__flutter__src__widgets__widget_span$46dart.src__widgets__container;
+  const basic = packages__flutter__src__widgets__widget_span$46dart.src__widgets__basic;
+  const text = packages__flutter__src__widgets__widget_span$46dart.src__widgets__text;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const edge_insets = packages__flutter__src__painting__edge_insets$46dart.src__painting__edge_insets;
+  const box_decoration = packages__flutter__src__painting__box_decoration$46dart.src__painting__box_decoration;
+  const border_radius = packages__flutter__src__painting__border_radius$46dart.src__painting__border_radius;
+  const flex = packages__flutter__src__rendering__flex$46dart.src__rendering__flex;
+  const date_format = packages__intl__src__intl__date_format$46dart.src__intl__date_format;
+  const text_style = packages__flutter__src__painting__strut_style$46dart.src__painting__text_style;
+  var date_widget = Object.create(dart.library);
+  var $toUpperCase = dartx.toUpperCase;
+  var $toString = dartx.toString;
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    _LocationL: () => (T._LocationL = dart.constFn(dart.legacy(widget_inspector._Location)))(),
+    JSArrayOfWidget: () => (T.JSArrayOfWidget = dart.constFn(_interceptors.JSArray$(framework.Widget)))(),
+    VoidTovoid: () => (T.VoidTovoid = dart.constFn(dart.fnType(dart.void, [])))()
+  };
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 63,
+        [_Location_line]: 47,
+        [_Location_file]: null
+      });
+    },
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 19,
+        [_Location_line]: 48,
+        [_Location_file]: null
+      });
+    },
+    get C1() {
+      return C[1] = dart.constList([C[2] || CT.C2, C[3] || CT.C3], T._LocationL());
+    },
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[1] || CT.C1,
+        [_Location_name]: null,
+        [_Location_column]: 15,
+        [_Location_line]: 47,
+        [_Location_file]: "file:///D:/Download/flutter/.pub-cache/hosted/pub.dartlang.org/date_picker_timeline-1.2.3/lib/date_widget.dart"
+      });
+    },
+    get C6() {
+      return C[6] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 29,
+        [_Location_line]: 49,
+        [_Location_file]: null
+      });
+    },
+    get C7() {
+      return C[7] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 19,
+        [_Location_line]: 50,
+        [_Location_file]: null
+      });
+    },
+    get C5() {
+      return C[5] = dart.constList([C[6] || CT.C6, C[7] || CT.C7], T._LocationL());
+    },
+    get C4() {
+      return C[4] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[5] || CT.C5,
+        [_Location_name]: null,
+        [_Location_column]: 15,
+        [_Location_line]: 49,
+        [_Location_file]: "file:///D:/Download/flutter/.pub-cache/hosted/pub.dartlang.org/date_picker_timeline-1.2.3/lib/date_widget.dart"
+      });
+    },
+    get C10() {
+      return C[10] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 61,
+        [_Location_line]: 51,
+        [_Location_file]: null
+      });
+    },
+    get C11() {
+      return C[11] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 19,
+        [_Location_line]: 52,
+        [_Location_file]: null
+      });
+    },
+    get C9() {
+      return C[9] = dart.constList([C[10] || CT.C10, C[11] || CT.C11], T._LocationL());
+    },
+    get C8() {
+      return C[8] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[9] || CT.C9,
+        [_Location_name]: null,
+        [_Location_column]: 15,
+        [_Location_line]: 51,
+        [_Location_file]: "file:///D:/Download/flutter/.pub-cache/hosted/pub.dartlang.org/date_picker_timeline-1.2.3/lib/date_widget.dart"
+      });
+    },
+    get C14() {
+      return C[14] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "mainAxisAlignment",
+        [_Location_column]: 13,
+        [_Location_line]: 44,
+        [_Location_file]: null
+      });
+    },
+    get C15() {
+      return C[15] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "crossAxisAlignment",
+        [_Location_column]: 13,
+        [_Location_line]: 45,
+        [_Location_file]: null
+      });
+    },
+    get C16() {
+      return C[16] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 13,
+        [_Location_line]: 46,
+        [_Location_file]: null
+      });
+    },
+    get C13() {
+      return C[13] = dart.constList([C[14] || CT.C14, C[15] || CT.C15, C[16] || CT.C16], T._LocationL());
+    },
+    get C12() {
+      return C[12] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[13] || CT.C13,
+        [_Location_name]: null,
+        [_Location_column]: 18,
+        [_Location_line]: 43,
+        [_Location_file]: "file:///D:/Download/flutter/.pub-cache/hosted/pub.dartlang.org/date_picker_timeline-1.2.3/lib/date_widget.dart"
+      });
+    },
+    get C19() {
+      return C[19] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "padding",
+        [_Location_column]: 11,
+        [_Location_line]: 42,
+        [_Location_file]: null
+      });
+    },
+    get C20() {
+      return C[20] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 11,
+        [_Location_line]: 43,
+        [_Location_file]: null
+      });
+    },
+    get C18() {
+      return C[18] = dart.constList([C[19] || CT.C19, C[20] || CT.C20], T._LocationL());
+    },
+    get C17() {
+      return C[17] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[18] || CT.C18,
+        [_Location_name]: null,
+        [_Location_column]: 16,
+        [_Location_line]: 41,
+        [_Location_file]: "file:///D:/Download/flutter/.pub-cache/hosted/pub.dartlang.org/date_picker_timeline-1.2.3/lib/date_widget.dart"
+      });
+    },
+    get C23() {
+      return C[23] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "width",
+        [_Location_column]: 9,
+        [_Location_line]: 35,
+        [_Location_file]: null
+      });
+    },
+    get C24() {
+      return C[24] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "margin",
+        [_Location_column]: 9,
+        [_Location_line]: 36,
+        [_Location_file]: null
+      });
+    },
+    get C25() {
+      return C[25] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "decoration",
+        [_Location_column]: 9,
+        [_Location_line]: 37,
+        [_Location_file]: null
+      });
+    },
+    get C26() {
+      return C[26] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 9,
+        [_Location_line]: 41,
+        [_Location_file]: null
+      });
+    },
+    get C22() {
+      return C[22] = dart.constList([C[23] || CT.C23, C[24] || CT.C24, C[25] || CT.C25, C[26] || CT.C26], T._LocationL());
+    },
+    get C21() {
+      return C[21] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[22] || CT.C22,
+        [_Location_name]: null,
+        [_Location_column]: 14,
+        [_Location_line]: 34,
+        [_Location_file]: "file:///D:/Download/flutter/.pub-cache/hosted/pub.dartlang.org/date_picker_timeline-1.2.3/lib/date_widget.dart"
+      });
+    },
+    get C29() {
+      return C[29] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 7,
+        [_Location_line]: 34,
+        [_Location_file]: null
+      });
+    },
+    get C30() {
+      return C[30] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onTap",
+        [_Location_column]: 7,
+        [_Location_line]: 57,
+        [_Location_file]: null
+      });
+    },
+    get C28() {
+      return C[28] = dart.constList([C[29] || CT.C29, C[30] || CT.C30], T._LocationL());
+    },
+    get C27() {
+      return C[27] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[28] || CT.C28,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 33,
+        [_Location_file]: "file:///D:/Download/flutter/.pub-cache/hosted/pub.dartlang.org/date_picker_timeline-1.2.3/lib/date_widget.dart"
+      });
+    }
+  }, false);
+  var C = Array(31).fill(void 0);
+  var I = [
+    "file:///D:/Download/flutter/.pub-cache/hosted/pub.dartlang.org/date_picker_timeline-1.2.3/lib/date_widget.dart",
+    "package:date_picker_timeline/date_widget.dart"
+  ];
+  var width$ = dart.privateName(date_widget, "DateWidget.width");
+  var date$ = dart.privateName(date_widget, "DateWidget.date");
+  var monthTextStyle$ = dart.privateName(date_widget, "DateWidget.monthTextStyle");
+  var dayTextStyle$ = dart.privateName(date_widget, "DateWidget.dayTextStyle");
+  var dateTextStyle$ = dart.privateName(date_widget, "DateWidget.dateTextStyle");
+  var selectionColor$ = dart.privateName(date_widget, "DateWidget.selectionColor");
+  var onDateSelected$ = dart.privateName(date_widget, "DateWidget.onDateSelected");
+  var locale$ = dart.privateName(date_widget, "DateWidget.locale");
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  date_widget.DateWidget = class DateWidget extends framework.StatelessWidget {
+    get width() {
+      return this[width$];
+    }
+    set width(value) {
+      super.width = value;
+    }
+    get date() {
+      return this[date$];
+    }
+    set date(value) {
+      super.date = value;
+    }
+    get monthTextStyle() {
+      return this[monthTextStyle$];
+    }
+    set monthTextStyle(value) {
+      super.monthTextStyle = value;
+    }
+    get dayTextStyle() {
+      return this[dayTextStyle$];
+    }
+    set dayTextStyle(value) {
+      super.dayTextStyle = value;
+    }
+    get dateTextStyle() {
+      return this[dateTextStyle$];
+    }
+    set dateTextStyle(value) {
+      super.dateTextStyle = value;
+    }
+    get selectionColor() {
+      return this[selectionColor$];
+    }
+    set selectionColor(value) {
+      super.selectionColor = value;
+    }
+    get onDateSelected() {
+      return this[onDateSelected$];
+    }
+    set onDateSelected(value) {
+      super.onDateSelected = value;
+    }
+    get locale() {
+      return this[locale$];
+    }
+    set locale(value) {
+      super.locale = value;
+    }
+    build(context) {
+      if (context == null) dart.nullFailed(I[0], 32, 29, "context");
+      return new ink_well.InkWell.new({child: new container.Container.new({width: this.width, margin: new edge_insets.EdgeInsets.all(3.0), decoration: new box_decoration.BoxDecoration.new({borderRadius: new border_radius.BorderRadius.all(new ui.Radius.circular(8.0)), color: this.selectionColor}), child: new basic.Padding.new({padding: new edge_insets.EdgeInsets.all(8.0), child: new basic.Column.new({mainAxisAlignment: flex.MainAxisAlignment.spaceBetween, crossAxisAlignment: flex.CrossAxisAlignment.center, children: T.JSArrayOfWidget().of([new text.Text.new(new date_format.DateFormat.new("MMM", this.locale).format(this.date)[$toUpperCase](), {style: this.monthTextStyle, $creationLocationd_0dea112b090073317d4: C[0] || CT.C0}), new text.Text.new(dart.toString(this.date.day), {style: this.dateTextStyle, $creationLocationd_0dea112b090073317d4: C[4] || CT.C4}), new text.Text.new(new date_format.DateFormat.new("E", this.locale).format(this.date)[$toUpperCase](), {style: this.dayTextStyle, $creationLocationd_0dea112b090073317d4: C[8] || CT.C8})]), $creationLocationd_0dea112b090073317d4: C[12] || CT.C12}), $creationLocationd_0dea112b090073317d4: C[17] || CT.C17}), $creationLocationd_0dea112b090073317d4: C[21] || CT.C21}), onTap: dart.fn(() => {
+          if (this.onDateSelected != null) {
+            dart.nullCheck(this.onDateSelected)(this.date);
+          }
+        }, T.VoidTovoid()), $creationLocationd_0dea112b090073317d4: C[27] || CT.C27});
+    }
+  };
+  (date_widget.DateWidget.new = function(opts) {
+    let date = opts && 'date' in opts ? opts.date : null;
+    if (date == null) dart.nullFailed(I[0], 21, 19, "date");
+    let monthTextStyle = opts && 'monthTextStyle' in opts ? opts.monthTextStyle : null;
+    let dayTextStyle = opts && 'dayTextStyle' in opts ? opts.dayTextStyle : null;
+    let dateTextStyle = opts && 'dateTextStyle' in opts ? opts.dateTextStyle : null;
+    let selectionColor = opts && 'selectionColor' in opts ? opts.selectionColor : null;
+    if (selectionColor == null) dart.nullFailed(I[0], 25, 19, "selectionColor");
+    let width = opts && 'width' in opts ? opts.width : null;
+    let onDateSelected = opts && 'onDateSelected' in opts ? opts.onDateSelected : null;
+    let locale = opts && 'locale' in opts ? opts.locale : null;
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    this[date$] = date;
+    this[monthTextStyle$] = monthTextStyle;
+    this[dayTextStyle$] = dayTextStyle;
+    this[dateTextStyle$] = dateTextStyle;
+    this[selectionColor$] = selectionColor;
+    this[width$] = width;
+    this[onDateSelected$] = onDateSelected;
+    this[locale$] = locale;
+    date_widget.DateWidget.__proto__.new.call(this, {$creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = date_widget.DateWidget.prototype;
+  dart.addTypeTests(date_widget.DateWidget);
+  dart.addTypeCaches(date_widget.DateWidget);
+  dart.setMethodSignature(date_widget.DateWidget, () => ({
+    __proto__: dart.getMethods(date_widget.DateWidget.__proto__),
+    build: dart.fnType(framework.Widget, [framework.BuildContext])
+  }));
+  dart.setLibraryUri(date_widget.DateWidget, I[1]);
+  dart.setFieldSignature(date_widget.DateWidget, () => ({
+    __proto__: dart.getFields(date_widget.DateWidget.__proto__),
+    width: dart.finalFieldType(dart.nullable(core.double)),
+    date: dart.finalFieldType(core.DateTime),
+    monthTextStyle: dart.finalFieldType(dart.nullable(text_style.TextStyle)),
+    dayTextStyle: dart.finalFieldType(dart.nullable(text_style.TextStyle)),
+    dateTextStyle: dart.finalFieldType(dart.nullable(text_style.TextStyle)),
+    selectionColor: dart.finalFieldType(ui.Color),
+    onDateSelected: dart.finalFieldType(dart.nullable(dart.fnType(dart.void, [core.DateTime]))),
+    locale: dart.finalFieldType(dart.nullable(core.String))
+  }));
+  dart.trackLibraries("packages/date_picker_timeline/date_widget.dart", {
+    "package:date_picker_timeline/date_widget.dart": date_widget
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["date_widget.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;IAYgB;;;;;;IACC;;;;;;IACE;;;;;;IAAgB;;;;;;IAAc;;;;;;IACnC;;;;;;IACiB;;;;;;IACf;;;;;;;UAcY;AACxB,YAAO,kCACE,oCACE,oBACY,+BAAI,kBACX,oDACiB,mCAAW,uBAAS,cACxC,8BAEF,gCACe,+BAAI,aACjB,yCACgC,yDACE,0CACrB,wBAChB,kBAAS,AAA0B,AAAa,+BAA5B,OAAO,oBAAe,oCAC/B,8EACX,kBAAc,cAAT,AAAK,wBACC,6EACX,kBAAS,AAAwB,AAAa,+BAA1B,KAAK,oBAAe,oCAC7B,sQAKZ;AAEL,cAAI;AAEwB,YAAZ,AAAC,eAAf,qBAAqB;;;IAI7B;;;QA5CgB;;QACA;QACA;QACA;QACA;;QACT;QACA;QACA;;IAPS;IACA;IACA;IACA;IACA;IACT;IACA;IACA;AARP;;EASE","file":"../../../../../../../packages/date_picker_timeline/date_widget.dart.lib.js"}');
+  // Exports:
+  return {
+    date_widget: date_widget
+  };
+}));
+
+//# sourceMappingURL=date_widget.dart.lib.js.map
