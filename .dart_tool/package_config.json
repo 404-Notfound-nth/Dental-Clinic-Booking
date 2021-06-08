@@ -191,10 +191,10 @@
       "name": "clinicbookingapp",
       "rootUri": "../",
       "packageUri": "lib/",
-      "languageVersion": "2.2"
+      "languageVersion": "2.3"
     }
   ],
-  "generated": "2021-06-05T08:56:25.081854Z",
+  "generated": "2021-06-08T15:40:44.482550Z",
   "generator": "pub",
   "generatorVersion": "2.13.0"
 }
